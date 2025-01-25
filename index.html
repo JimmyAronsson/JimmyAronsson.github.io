@@ -191,19 +191,8 @@
             </div>
         </div>
     </div>
-    <div class="container" id="contact">
-        <h2>Contact Me</h2>
-        <div class="contact-form">
-            <p>Interested in working together? Send me a message.</p>
-            <form action="mailto:jimmy_aronsson@outlook.com" method="post" enctype="text/plain">
-                <input type="text" name="name" placeholder="Your Name" required>
-                <input type="email" name="email" placeholder="Your Email" required>
-                <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-                <button type="submit">Send Message</button>
-            </form>
-        </div>
-    </div>
 
+    <!-- Contact Me box -->
     <div class="container" id="contact">
         <h2>Contact Me</h2>
         <div class="contact-form">
@@ -222,10 +211,9 @@
                 <input type="hidden" name="_next" value="thank-you.html">
                 <button type="submit">Send Message</button>
             </form>
-            <p id="form-status" style="color: green; display: none;">Message sent successfully!</p>
+            <p id="form-status" style="color: green; margin-top: 5px; display: none;">Message sent</p>
         </div>
     </div>
-
     <script>
     document.getElementById("contactForm").addEventListener("submit", function(event) {
         event.preventDefault(); // Prevents default form submission

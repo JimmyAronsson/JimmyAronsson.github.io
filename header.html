@@ -1,0 +1,86 @@
+<style>
+    /* Header Styling */
+    .site-header {
+        text-align: center;
+        padding: 50px 20px;
+        background: linear-gradient(135deg, var(--header-fade-start), var(--header-fade-end));
+        color: var(--header-color);
+        font-family: var(--font-family);
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        backdrop-filter: blur(10px);
+    }
+    .site-header h1 {
+        font-size: 2.8em;
+        margin-bottom: 10px;
+    }
+
+    .site-header p {
+        font-size: 1.2em;
+        opacity: 0.9;
+        max-width: 800px;
+        margin: 10px auto;
+    }
+
+    /* Navigation Bar */
+    nav {
+        text-align: center;
+        background: var(--container-bg);
+        padding: 15px 0;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+    }
+
+    nav a {
+        color: var(--text-color);
+        text-decoration: none;
+        margin: 0 20px;
+        font-size: 1.2em;
+        font-weight: bold;
+        transition: color 0.3s ease-in-out, transform 0.2s ease-in-out;
+        display: inline-block;
+    }
+
+    nav a:hover {
+        color: var(--highlight-color);
+        transform: scale(1.1);
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .site-header {
+            padding: 40px 15px;
+        }
+
+        .site-header h1 {
+            font-size: 2.2em;
+        }
+
+        .site-header p {
+            font-size: 1em;
+        }
+
+        nav {
+            padding: 10px 0;
+        }
+
+        nav a {
+            font-size: 1em;
+            margin: 0 10px;
+        }
+    }
+</style>
+
+<header class="site-header">
+    <h1>Covariant Consulting AB</h1>
+    <p>The personal consultancy firm of Jimmy Aronsson, PhD</p>
+    <p>Expert in Mathematics, AI and Data Science</p>
+    <p>This page is under development; the current portfolio is fictive and acts as Lorem Ipsum to test the webpage design</p>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="index.html#portfolio">Portfolio</a>
+    <a href="index.html#contact">Contact</a>
+    <a href="cv.html">CV</a>
+</nav>

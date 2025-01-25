@@ -1,0 +1,75 @@
+/* General Variables for Light/Dark Mode */
+body[color-mode="light"] {
+    --bg-color: #ffffff;
+    --text-color: #1a1a1a;
+    --container-bg: #f4f4f4;
+    --highlight-color: #17a2b8;
+    --header-fade-start: #17a2b8;
+    --header-fade-end: #7ed6df;
+    --font-family: Arial, sans-serif;
+}
+
+body[color-mode="dark"] {
+    --bg-color: #1a1a1a;
+    --text-color: #eaeaea;
+    --container-bg: #222;
+    --highlight-color: #20c997;
+    --header-color: black;
+    --header-fade-start: #20c997;
+    --header-fade-end: #50f0c1;
+    --font-family: Arial, sans-serif;
+}
+
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-family);
+}
+
+/* General Layout */
+html, body {
+    background: var(--bg-color);
+    color: var(--text-color);
+    transition: background 0.3s ease-in-out;
+}
+
+.container {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 20px;
+    background: var(--container-bg);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Buttons */
+button {
+    background: var(--highlight-color);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+button:hover {
+    background: rgba(23, 162, 184, 0.8);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #333;
+    color: white;
+    margin-top: 50px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+}

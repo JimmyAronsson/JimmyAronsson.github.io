@@ -4,81 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jimmy Aronsson, PhD. | Math & AI Specialist</title>
+    <script defer src="layoutLoader.js"></script>
+
     <style>
-        /* General Styling */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Arial', sans-serif;
-        }
-        body {
-            background: #f4f4f4;
-            color: #333;
-        }
-        /* Header Section */
-        header {
-            background: linear-gradient(135deg, #3498db, #8e44ad);
-            color: white;
-            padding: 40px 20px;
-            text-align: center;
-        }
-        header h1 {
-            font-size: 2.8em;
-        }
-        header p {
-            font-size: 1.3em;
-            margin-top: 10px;
-        }
-        /* Navigation */
-        nav {
-            text-align: center;
-            background: #333;
-            padding: 10px;
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 15px;
-            font-size: 1.2em;
-            transition: 0.3s;
-        }
-        nav a:hover {
-            color: #f1c40f;
-        }
-        /* Sections */
-        .container {
-            max-width: 900px;
-            margin: 50px auto;
-            padding: 20px;
-            background: white;
+        /* Custom Styles for Index Page */
+
+        /* Services Section Customization */
+        #services {
+            background: var(--container-bg);
+            padding: 40px;
             border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        h2 {
-            text-align: center;
-            margin-bottom: 20px;
-            font-size: 2em;
-            color: #333;
-        }
-        /* Services Section */
         .services {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
-            text-align: center;
         }
         .service-box {
             width: 45%;
-            background: #ecf0f1;
             padding: 20px;
-            border-radius: 8px;
-            margin: 10px;
+            background: var(--container-bg);
+            border-left: 5px solid var(--highlight-color);
+            box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.3);
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease-in-out;
+            margin-bottom: 12px;
         }
         .service-box:hover {
-            background: #d5dbdb;
-            transition: 0.3s;
+            transform: scale(1.05);
         }
+
         /* Portfolio Section */
         .portfolio {
             display: flex;
@@ -87,70 +42,85 @@
         }
         .portfolio-item {
             width: 45%;
-            background: #f4f4f4;
             padding: 15px;
-            margin: 10px;
-            border-left: 5px solid #3498db;
+            background: var(--container-bg);
+            border-left: 5px solid var(--highlight-color);
+            box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.3);
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease-in-out;
+            margin-bottom: 12px;
         }
-        /* Contact Section */
+        .portfolio-item:hover {
+            transform: scale(1.05);
+        }
+
+        /* Contact Form */
         .contact-form {
-            text-align: center;
-        }
-        input, textarea {
-            width: 100%;
+            background: var(--container-bg);
             padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ccc;
+            border-radius: 10px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid var(--highlight-color);
             border-radius: 5px;
+            font-size: 1rem;
+            background: var(--container-bg);
+            color: var(--text-color);
+            font-family: var(--font-family);
         }
-        button {
-            background: #3498db;
+        .contact-form input:focus, .contact-form textarea:focus {
+            outline: none !important;
+            border: 1px var(--highlight-color);
+            border-radius: 5px;
+            box-shadow: 0 0 3px var(--highlight-color);
+            background: var(--container-bg);
+            color: var(--text-color);
+        }
+        .contact-form button {
+            width: 100%;
+            padding: 12px;
+            background: var(--highlight-color);
             color: white;
-            padding: 10px 20px;
-            border: none;
             font-size: 1.2em;
+            border: none;
+            border-radius: 5px;
             cursor: pointer;
+            transition: background 0.3s ease-in-out;
         }
-        button:hover {
-            background: #2980b9;
+        .contact-form button:hover {
+            background: #198754;
         }
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 20px;
-            background: #333;
-            color: white;
-            margin-top: 50px;
-        }
+
+        /* Responsive Design */
         @media (max-width: 768px) {
-            .services, .portfolio {
-                flex-direction: column;
-                align-items: center;
-            }
             .service-box, .portfolio-item {
-                width: 90%;
+                width: 100%;
+                margin-bottom: 20px;
+            }
+            .hero {
+                padding: 60px 20px;
+            }
+            .hero h1 {
+                font-size: 2.5em;
+            }
+            .hero p {
+                font-size: 1.2em;
             }
         }
     </style>
+
+
 </head>
 <body>
-
-    <header>
-        <h1>Covariant Consulting AB</h1>
-        <p>The personal consultancy firm of Jimmy Aronsson, PhD</p>
-        <p>Expert in Mathematics, AI and Data Science</p>
-        <p>This page is under development; the current portfolio is fictive and acts as Lorem Ipsum to test the webpage design</p>
-    </header>
-
-    <nav>
-        <a href="#services">Services</a>
-        <a href="#portfolio">Portfolio</a>
-        <a href="#contact">Contact</a>
-        <a href="cv.html">CV</a>
-    </nav>
+    <div id="header"></div>
 
     <div class="container" id="services">
-        <h2>My Services</h2>
+        <h2 style="margin-bottom: 15px;">My Services</h2>
         <div class="services">
             <div class="service-box">
                 <h3>Mathematics</h3>
@@ -171,7 +141,7 @@
         </div>
     </div>
     <div class="container" id="portfolio">
-        <h2>Portfolio</h2>
+        <h2 style="margin-bottom: 15px;">Portfolio</h2>
         <div class="portfolio">
             <div class="portfolio-item" onclick="window.location.href='https://github.com/jimmyaronsson/sales-forecasting-tool';"  style="cursor: pointer;">
                 <h3>Sales Forecasting Tool</h3>
@@ -192,11 +162,11 @@
         </div>
     </div>
 
-    <!-- Contact Me box -->
+    <!-- Contact Me -->
     <div class="container" id="contact">
-        <h2>Contact Me</h2>
+        <h2 style="margin-bottom: 15px;">Contact Me</h2>
         <div class="contact-form">
-            <p>Interested in working together? Send me a message.</p>
+            <p style="font-family: var(--font-family); margin-bottom: 5px;">Interested in working together? Send me a message.</p>
             <form id="contactForm" action="https://formsubmit.co/jimmy_aronsson@outlook.com" method="POST">
                 <div class="form-group">
                     <input type="text" id="name" name="name" placeholder="Your Name" required>
@@ -238,9 +208,7 @@
     });
     </script>
 
-    <footer>
-        <p>© 2025 Jimmy Aronsson. All Rights Reserved.</p>
-    </footer>
+
 
 </body>
 </html>

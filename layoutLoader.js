@@ -30,25 +30,13 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     // TODO: Fix toggling between ligth and dark modes
-    loadStylesheet("styles.css");
-    document.body.setAttribute("color-mode", "dark");
+    //loadStylesheet("styles.css"); // Already done in each page separately
+    //document.body.setAttribute("color-mode", "dark");
 
     // Load HTML components
+    console.log("layoutLoader.js loaded");
     loadComponent("header", "header.html");
-    //loadStylesheet("header.css");
+    console.log("header loaded");
     // loadComponent("footer", "footer.html"); // NOT IMPLEMENTED
     // loadComponent("sidebar", "sidebar.html"); // NOT IMPLEMENTED
-
-    // Load stylesheets
-
-    // Load scripts
-    // loadScript("analytics.js");  // NOT IMPLEMENTED
-    // loadScript("ui-effects.js"); // NOT IMPLEMENTED
-
-    // Load meta tags
-    // addMetaTag("description", "Dynamic content loading in HTML."); // NOT USED
-    // addMetaTag("author", "Jimmy Aronsson"); // NOT USED
 });
-
-// Call the function when the document loads
-// document.addEventListener("DOMContentLoaded", toggleDarkMode);

@@ -1,5 +1,5 @@
 /* General Variables for Light/Dark Mode */
-body[color-mode="light"] {
+[color-mode="light"] {
     --bg-color: #ffffff;
     --text-color: #1a1a1a;
     --container-bg: #f4f4f4;
@@ -9,7 +9,7 @@ body[color-mode="light"] {
     --font-family: Arial, sans-serif;
 }
 
-body[color-mode="dark"] {
+[color-mode="dark"] {
     --bg-color: #1a1a1a;
     --text-color: #eaeaea;
     --container-bg: #222;

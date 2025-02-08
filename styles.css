@@ -5,7 +5,7 @@
     --container-bg: #f4f4f4;
     --highlight-color: #17a2b8;
 
-    --header-color: white;
+    --header-color: black;
     --header-text-color: black;
     --header-fade-start: #17a2b8;
     --header-fade-end: #7ed6df;
@@ -18,12 +18,12 @@
     --bg-color: #1a1a1a;
     --text-color: #eaeaea;
     --container-bg: #222;
-    --highlight-color: #20c997;
+    --highlight-color: #17a2b8;
 
     --header-color: black;
     --header-text-color: white;
-    --header-fade-start: #20c997;
-    --header-fade-end: #50f0c1;
+    --header-fade-start: #17a2b8;
+    --header-fade-end: #7ed6df;
 
     --font-family: Arial, sans-serif;
     --font-header: Arial, sans-serif;
@@ -126,6 +126,34 @@ html, body {
     background: var(--container-bg);
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.blogpost {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 20px;
+    background: var(--container-bg);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+    font-family: var(--font-family);
+    line-height: 1.6;
+
+
+    color: var(--text-color);
+}
+
+.blogpost h1 {
+    font-size: 2.2em;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.blogpost h2 {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 0;
 }
 
 /* Buttons */

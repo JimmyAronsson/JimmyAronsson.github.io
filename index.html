@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jimmy Aronsson, PhD. | Math & AI Specialist</title>
     <link rel="stylesheet" href="styles.css">
-    <script defer src="layoutLoader.js"></script>
 
     <style>
         /* Custom Styles for Index Page */
@@ -36,6 +35,11 @@
         }
 
         /* Portfolio Section */
+        #portfolio {
+            background: var(--container-bg);
+            padding: 40px;
+            border-radius: 10px;
+        }
         .portfolio {
             display: flex;
             flex-wrap: wrap;
@@ -56,6 +60,11 @@
         }
 
         /* Contact Form */
+        #contact-form {
+            background: var(--container-bg);
+            padding: 40px;
+            border-radius: 10px;
+        }
         .contact-form {
             background: var(--container-bg);
             padding: 10px;
@@ -114,11 +123,24 @@
             }
         }
     </style>
-
-
 </head>
-<body color-mode="dark">
-    <div id="header"></div>
+
+<body>
+    <header class="site-header">
+        <h1>Covariant Consulting AB</h1>
+        <p>The personal consultancy firm of Jimmy Aronsson, PhD</p>
+        <p>Expert in Mathematics, AI and Data Science</p>
+        <p>This page is under development; the current portfolio is fictive and acts as Lorem Ipsum to test the webpage design</p>
+        <button id="toggle-theme">Toggle Dark/Light Mode</button>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="index.html#portfolio">Portfolio</a>
+        <a href="index.html#contact">Contact</a>
+        <a href="cv.html">CV</a>
+        <a href="blog-post-template.html">Blog</a>
+    </nav>
 
     <div class="container" id="services">
         <h2 style="margin-bottom: 15px;">My Services</h2>
@@ -141,6 +163,7 @@
             </div>
         </div>
     </div>
+
     <div class="container" id="portfolio">
         <h2 style="margin-bottom: 15px;">Portfolio</h2>
         <div class="portfolio">
@@ -163,7 +186,6 @@
         </div>
     </div>
 
-    <!-- Contact Me -->
     <div class="container" id="contact">
         <h2 style="margin-bottom: 15px;">Contact Me</h2>
         <div class="contact-form">
@@ -185,13 +207,15 @@
             <p id="form-status" style="color: green; margin-top: 5px; display: none;">Message sent</p>
         </div>
     </div>
+
+    <!-- Contact form script -->
     <script>
     document.getElementById("contactForm").addEventListener("submit", function(event) {
         event.preventDefault(); // Prevents default form submission
-    
+
         let form = event.target;
         let formData = new FormData(form);
-    
+
         fetch(form.action, {
             method: "POST",
             body: formData,
@@ -208,8 +232,25 @@
         }).catch(error => alert("Something went wrong, please try again."));
     });
     </script>
-
-
-
 </body>
+
+<!-- Dark/Light Mode Toggler -->
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const body = document.body;
+        const toggleButton = document.getElementById("toggle-theme");
+
+        // Load the saved mode from localStorage
+        const savedMode = localStorage.getItem("color-mode");
+        if (savedMode) {
+            body.setAttribute("color-mode", savedMode);
+        }
+
+        toggleButton.addEventListener("click", function() {
+            const currentMode = body.getAttribute("color-mode") === "dark" ? "light" : "dark";
+            body.setAttribute("color-mode", currentMode);
+            localStorage.setItem("color-mode", currentMode);
+        });
+    });
+</script>
 </html>

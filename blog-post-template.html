@@ -3,29 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog Post Title</title>
+    <title>Jimmy Aronsson, PhD. | Math & AI Specialist</title>
     <link rel="stylesheet" href="styles.css">
+
+    <!-- Used for <code> style -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
-    <style>
 
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 20px;
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            text-align: center;
-        }
-        header, article, footer {
+    <style>
+        article, footer {
             max-width: 800px;
             margin: auto;
-            padding: 20px;
+            margin-top: 10px;
+            padding: 10px;
             background: var(--bg-color);
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
         }
         pre {
             background: var(--content-background);
@@ -61,16 +53,28 @@
         }
     </style>
 </head>
-<body color-mode="dark">
-    <header>
-        <h1>Blog Post Title</h1>
-        <p>By <strong>Jimmy Aronsson, PhD</strong> | Math & AI Specialist</p>
-        <p><em>Published on [Date]</em></p>
+
+<body>
+    <header class="site-header">
+        <h1>Covariant Consulting AB</h1>
+        <p>The personal consultancy firm of Jimmy Aronsson, PhD</p>
+        <p>Expert in Mathematics, AI and Data Science</p>
+        <p>This page is under development; the current portfolio is fictive and acts as Lorem Ipsum to test the webpage design</p>
         <button id="toggle-theme">Toggle Dark/Light Mode</button>
     </header>
 
-    <article>
-        <section id="introduction">
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="index.html#portfolio">Portfolio</a>
+        <a href="index.html#contact">Contact</a>
+        <a href="cv.html">CV</a>
+        <a href="blog-post-template.html">Blog</a>
+    </nav>
+
+    <article class="blogpost">
+        <h1>Blog Post Title</h1>
+
+        <section id="blogpost">
             <h2>Introduction</h2>
             <p>[Write a brief introduction about the topic of the blog post. Explain why it's important or relevant to your audience.]</p>
         </section>
@@ -119,7 +123,7 @@
     </article>
 
     <footer>
-        <p>Interested in discussing more? <a href="contact.html">Contact me</a> for inquiries.</p>
+        <p>Interested in discussing more? <a href="index.html#contact">Contact me</a> for inquiries.</p>
     </footer>
 
     <script>

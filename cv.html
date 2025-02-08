@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jimmy Aronsson - CV</title>
     <link rel="stylesheet" href="styles.css">
-    <script defer src="layoutLoader.js"></script>
 
     <style>
         /* General Section Styling */
@@ -114,9 +113,22 @@
     </style>
 </head>
 
-<body color-mode="dark">
+<body>
+    <header class="site-header">
+        <h1>Covariant Consulting AB</h1>
+        <p>The personal consultancy firm of Jimmy Aronsson, PhD</p>
+        <p>Expert in Mathematics, AI and Data Science</p>
+        <p>This page is under development; the current portfolio is fictive and acts as Lorem Ipsum to test the webpage design</p>
+        <button id="toggle-theme">Toggle Dark/Light Mode</button>
+    </header>
 
-    <div id="header"></div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="index.html#portfolio">Portfolio</a>
+        <a href="index.html#contact">Contact</a>
+        <a href="cv.html">CV</a>
+        <a href="blog-post-template.html">Blog</a>
+    </nav>
 
     <div class="container">
         <h1>Curriculum Vitae</h1>
@@ -175,7 +187,25 @@
         </div>
         <a class="back-link" href="index.html">Back to Home</a>
     </div>
-
-
 </body>
+
+<!-- Dark/Light Mode Toggler -->
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const body = document.body;
+        const toggleButton = document.getElementById("toggle-theme");
+
+        // Load the saved mode from localStorage
+        const savedMode = localStorage.getItem("color-mode");
+        if (savedMode) {
+            body.setAttribute("color-mode", savedMode);
+        }
+
+        toggleButton.addEventListener("click", function() {
+            const currentMode = body.getAttribute("color-mode") === "dark" ? "light" : "dark";
+            body.setAttribute("color-mode", currentMode);
+            localStorage.setItem("color-mode", currentMode);
+        });
+    });
+</script>
 </html>

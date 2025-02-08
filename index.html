@@ -237,18 +237,18 @@
 <!-- Dark/Light Mode Toggler -->
 <script>
     document.addEventListener("DOMContentLoaded", function() {
-        const body = document.body;
+        const root = document.documentElement;
         const toggleButton = document.getElementById("toggle-theme");
 
         // Load the saved mode from localStorage
         const savedMode = localStorage.getItem("color-mode");
         if (savedMode) {
-            body.setAttribute("color-mode", savedMode);
+            root.setAttribute("color-mode", savedMode);
         }
 
         toggleButton.addEventListener("click", function() {
-            const currentMode = body.getAttribute("color-mode") === "dark" ? "light" : "dark";
-            body.setAttribute("color-mode", currentMode);
+            const currentMode = root.getAttribute("color-mode") === "dark" ? "light" : "dark";
+            root.setAttribute("color-mode", currentMode);
             localStorage.setItem("color-mode", currentMode);
         });
     });

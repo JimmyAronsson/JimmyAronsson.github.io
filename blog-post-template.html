@@ -44,11 +44,12 @@
             font-size: 0.9em;
             color: #bbb;
         }
-        a {
+
+        ref a {
             color: #61dafb;
             text-decoration: none;
         }
-        a:hover {
+        ref a:hover {
             text-decoration: underline;
         }
     </style>
@@ -82,7 +83,7 @@
         <section id="key-concept">
             <h2>Key Concept / Problem Statement</h2>
             <p>[Introduce the problem, topic, or concept you’re discussing. Use clear and concise language. If applicable, include a real-world example.]</p>
-            <p>An example is shown in <a href="#figure1">Figure 1</a>.</p>
+            <p>An example is shown in <ref><a href="#figure1">Figure 1</a></ref>.</p>
         </section>
 
         <section id="solution">
@@ -128,22 +129,24 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            const body = document.body;
+            const root = document.documentElement;
             const toggleButton = document.getElementById("toggle-theme");
 
             // Load the saved mode from localStorage
             const savedMode = localStorage.getItem("color-mode");
             if (savedMode) {
-                body.setAttribute("color-mode", savedMode);
+                root.setAttribute("color-mode", savedMode);
             }
 
             toggleButton.addEventListener("click", function() {
-                const currentMode = body.getAttribute("color-mode") === "dark" ? "light" : "dark";
-                body.setAttribute("color-mode", currentMode);
+                const currentMode = root.getAttribute("color-mode") === "dark" ? "light" : "dark";
+                root.setAttribute("color-mode", currentMode);
                 localStorage.setItem("color-mode", currentMode);
             });
         });
     </script>
 
+    <!-- Removed until fixed -->
+    <!-- <button id="back-to-top" title="Back to Top">&#8679;</button> -->
 </body>
 </html>

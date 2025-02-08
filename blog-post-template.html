@@ -123,24 +123,25 @@
     <footer>
         <p>Interested in discussing more? <a href="index.html#contact">Contact me</a> for inquiries.</p>
     </footer>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const root = document.documentElement;
-            const toggleButton = document.getElementById("toggle-theme");
-
-            // Load the saved mode from localStorage
-            const savedMode = localStorage.getItem("color-mode");
-            if (savedMode) {
-                root.setAttribute("color-mode", savedMode);
-            }
-
-            toggleButton.addEventListener("click", function() {
-                const currentMode = root.getAttribute("color-mode") === "dark" ? "light" : "dark";
-                root.setAttribute("color-mode", currentMode);
-                localStorage.setItem("color-mode", currentMode);
-            });
-        });
-    </script>
 </body>
+
+<!-- Dark/Light Mode Toggler -->
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const root = document.documentElement;
+        const toggleButton = document.getElementById("toggle-theme");
+
+        // Load the saved mode from localStorage
+        const savedMode = localStorage.getItem("color-mode");
+        if (savedMode) {
+            root.setAttribute("color-mode", savedMode);
+        }
+
+        toggleButton.addEventListener("click", function() {
+            const currentMode = root.getAttribute("color-mode") === "dark" ? "light" : "dark";
+            root.setAttribute("color-mode", currentMode);
+            localStorage.setItem("color-mode", currentMode);
+        });
+    });
+</script>
 </html>
